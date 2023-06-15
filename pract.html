@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <input type="number" maxlength="1" name="inp" class="input" id="inp1">
+    <input type="number" maxlength="1" name="inp" class="input">
+    <input type="number" maxlength="1" name="inp" class="input">
+    <input type="number" maxlength="1" name="inp" class="input">
+    <input type="number" maxlength="1" name="inp" class="input">
+    <input type="number" maxlength="1" name="inp" class="input">
+
+    <p id="p"></p>
+    <button class="btn" id="btn">paste</button>
+
+    <script>
+
+
+
+        let pbtn = document.getElementById('btn')
+        let input1 = document.getElementById('inp1')
+        let inputs = document.querySelectorAll('input')
+        let p = document.getElementById('p')
+       
+    
+            
+            
+            pbtn.addEventListener('click', async() =>{
+                
+                let data = await navigator.clipboard.readText().then((clipText) => (clipText))
+
+                data = data.split('');
+
+                [].forEach.call(document.querySelectorAll("input[name=inp]"), (node, index) => {
+                        node.value = data[index];
+                    });
+
+            })
+        
+          
+            
+            // window.addEventListener("paste", function (e) {
+            //     if (e.target.type === 'number') {
+            //         var data = e.clipboardData.getData('Text');
+            //         data = data.split('');
+            //         console.log(data);
+            //         [].forEach.call(document.querySelectorAll("input[name=inp]"), (node, index) => {
+            //             node.value = data[index];
+            //         });
+            //     }
+            // });
+            
+   
+
+
+
+        // document.addEventListener("paste", function (e) {
+        //     if (e.target.type === "number") {
+        //         var data = e.clipboardData.getData('Text');
+        //         data = data.split('');
+        //         console.log(data);
+        //         [].forEach.call(document.querySelectorAll("input[name=inp]"), (node, index) => {
+        //             node.value = data[index];
+        //         });
+
+        //     }
+        // });
+
+
+        // let input = document.getElementById('inp')
+        // input.addEventListener('keydown', (e) => {
+        //     if(e.target.value.length >= 1){
+        //         input.style.background='red'
+        //     }
+        //     if(e.key === "Backspace")
+        //     alert(e.key)
+        // })
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

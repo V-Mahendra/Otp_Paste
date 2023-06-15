@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* #pasteBtn{
+        display: none;
+      } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mobile">
+      <span class="back">
+        <img src="images/Back arrow@2x.png" alt="" />
+      </span>
+
+      <h2>Additional OTP</h2>
+      <p class="content">
+        For enhanced security and verification of this transaction, an
+        additional otp has been sent to your mobile number +91 XXXXX X2778.
+      </p>
+
+      <form class="input-fields" id="Inputs">
+        <input type="number" maxlength="1" id="inp1" min="0" max="9" class="otpInput" />
+        <input type="number" maxlength="1" id="inp2" min="0" max="9" class="otpInput" />
+        <input type="number" maxlength="1" id="inp3" min="0" max="9" class="otpInput" />
+        <input type="number" maxlength="1" id="inp4" min="0" max="9" class="otpInput" />
+        <input type="number" maxlength="1" id="inp5" min="0" max="9" class="otpInput" />
+        <input type="number" maxlength="1" id="inp6" min="0" max="9" class="otpInput" />
+      </form>
+      <div class="otp-option">
+        <span id="otpOption" class="otp-head">RECEIVE OTP VIA CALL</span>
+        <span id="time"></span>
+      </div>
+
+
+      <div class="button">
+        <button class="btn" id="pasteBtn">Paste</button>
+        <button class="btn" onclick="otp_submit()">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
